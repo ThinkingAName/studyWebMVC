@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+   <!--默认配置-->
+    <default-config>  
+        <property name="initialPoolSize">5</property>  
+        <property name="maxIdleTime">10</property>  
+        <property name="maxPoolSize">50</property>  
+        <property name="minPoolSize">5</property>  
+        <property name="maxStatements">50</property>  
+    </default-config>  
+  
+   <!--配置连接池mysql-->
+    <named-config name="mysql">  
+        <property name="driverClass">com.mysql.cj.jdbc.Driver</property> 
+        <!--"&amp;"是"&"的转义字符  --> 
+        <property name="jdbcUrl">jdbc:mysql:///test?serverTimezone=GMT&amp;useSSL=false</property>  
+        <property name="user">root</property>  
+        <property name="password">starzhang</property>  
+        <property name="initialPoolSize">5</property>  
+        <property name="maxIdleTime">10</property>  
+        <property name="maxPoolSize">50</property>  
+        <property name="minPoolSize">5</property>  
+        <property name="maxStatements">50</property>  
+    </named-config>  
+    
+    <!--配置连接池2-->
+    ......
+</c3p0-config>
